@@ -7,7 +7,7 @@ const querystring = require('querystring');
 const config = require('config').get('_');
 
 const query = querystring.escape(JSON.stringify({
-  filter: config.webhook.filter,
+  filter: config.filter,
   until: 9999999999 // listen as long as the (this) container is running.
 }));
 
@@ -20,12 +20,14 @@ listener
     // Inject our data
     payload.dockerHost = process.env.DOCKER_HOST_IP;
 
-    // Fire the webhook
-    webhook.post( {
-      url: config.webhook.url,
-      json: true,
-      body: payload,
-    }, function(err){if(err){console.error(err)}});
+    // Fire the webhook(s)
+    config.webhooks.forEach((url) => {
+      webhook.post( {
+        url: url,
+        json: true,
+        body: payload,
+      }, function(err){if(err){console.error(err)}});
+    })
   })
   .on('end', () => {
     console.log('Unexpected end.  Exiting to force restart.');

@@ -2,6 +2,7 @@
   "name": "docker-event-webhooks",
   "version": "0.1.0",
   "description": "A Docker container providing webhooks for Docker events on the host the container runs on",
+  "private": true,
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

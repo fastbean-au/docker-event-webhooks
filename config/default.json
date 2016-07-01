@@ -1,0 +1,9 @@
+{
+  "_": {
+    "dockerSocket": "/var/run/docker.sock",
+    "webhook": {
+      "url": "",
+      "filter": {}
+    }
+  }
+}

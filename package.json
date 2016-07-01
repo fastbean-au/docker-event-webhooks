@@ -1,0 +1,30 @@
+{
+  "name": "docker-event-webhooks",
+  "version": "0.0.0",
+  "description": "A Docker container providing webhooks for Docker events on the host the container runs on",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fastbean-au/docker-event-webhooks.git"
+  },
+  "keywords": [
+    "docker",
+    "notifier",
+    "webhook"
+  ],
+  "author": {
+    "name": "fastbean-au",
+    "email": "fastbean_au@yahoo.com.au"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fastbean-au/docker-event-webhooks/issues"
+  },
+  "dependencies": {
+    "config": "^1.21.0",
+    "request": "^2.72.0"
+  }
+}

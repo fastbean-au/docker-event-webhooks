@@ -1,6 +1,8 @@
 # docker-event-webhooks
 A Docker container providing webhooks for Docker events on the host that the container runs on.
 
+[![Dependency Status](https://dependencyci.com/github/fastbean-au/docker-event-webhooks/badge)](https://dependencyci.com/github/fastbean-au/docker-event-webhooks)
+
 A local config file is expected to be provided with the details of the webhook endpoint, and the filters for which matching events will be forwarded.  The filter should be structured like this:
 
 ```

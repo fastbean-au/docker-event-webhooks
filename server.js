@@ -12,7 +12,14 @@ const query = querystring.escape(JSON.stringify({
 }));
 
 listener
-  .get( `http://unix:${config.dockerSocket}:/events?${query}` )
+  .get(
+    { 
+      url: `http://unix:${config.dockerSocket}:/events?${query}` ,
+      headers: {
+        Host: config.dockerSocket,
+      }
+    }
+  )
   .on( 'data', (data) =>{ 
     // Convert the buffer to an object
     const payload = JSON.parse(data.toString());

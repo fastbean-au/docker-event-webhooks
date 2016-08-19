@@ -1,6 +1,6 @@
 {
   "name": "docker-event-webhooks",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A Docker container providing webhooks for Docker events on the host the container runs on",
   "private": true,
   "main": "server.js",
